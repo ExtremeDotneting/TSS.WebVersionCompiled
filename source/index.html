@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>The strongest survive</title>
+	<script src="./web-version/output/customFuncs.js"></script>
+</head>
+<body style="font-family: cambria;">
+	<div id="enText" style="display: none;">
+		<div align="right">
+			<a href="./index.html?lang=ru">Switch to Russian</a>
+		</div>
+
+		<div align="center">
+			<img src="./logo.png" alt="logo" >
+		</div>
+		
+		<h1>Introduction</h1>
+		<div style="font-size: 20px">
+			<p>The strongest survives - simulator of the evolution of unicellular organisms. In fact, this is more a game than a real simulation, because the universe of TSS is subject to fictional rules. In this universe, there are many constants that affect events in it. You can change them and observe the pathetic attempts of unicellular creatures to adapt to the new conditions. Such a simulator of God.</p>
+			<p>At this site you can see <a href="./web-version/index.html?lang=en">web version</a> of my simulator. But it has much less opportunityes than <a href="./wpf-version.zip">PC version</a>.</p>
+			<p>And you can download older versions of game: on <a href="./winforms-version.zip">winforms</a> or <a href="./console-version.zip">console</a>.
+		</div>
+		<h1>Contact autor</h1>
+		<div style="font-size: 20px">
+			<p>
+			&emsp;&emsp;Vk - <a href="https://vk.com/yura_mysko">https://vk.com/yura_mysko</a>
+			<br>&emsp;&emsp;Youtube chanel with demonstrations of my programs - <a href="https://www.youtube.com/channel/UCiIj3Q0z1pNJ2KyNRcspoZw">https://www.youtube.com/channel/UCiIj3Q0z1pNJ2KyNRcspoZw</a>
+			<br>&emsp;&emsp;Blog on Habrahabr - <a href="https://habrahabr.ru/users/kogercoder/">https://habrahabr.ru/users/kogercoder/</a>
+			<br>&emsp;&emsp;Telegram - <a href="https://t.me/yura_mysko">https://t.me/yura_mysko</a>
+			<br>&emsp;&emsp;Github with source of this game - <a href="https://github.com/KogerCoder">https://github.com/KogerCoder</a>
+			</p>
+		</div>
+	</div>
+	
+	<div id="ruText" style="display: none;">
+		<div align="right">
+			<a href="./index.html?lang=en">Switch to English</a>
+		</div>
+
+		<div align="center">
+			<img src="./logo.png" alt="logo" >
+		</div>
+		
+		<h1>Введение</h1>
+		<div style="font-size: 20px">
+			<p>The strongest survives - симулятор эволюции одноклеточных организмов. На самом деле это скорее игра, чем реальная симуляция, ведь вселенная TSS подчиняется выдуманным правилам. В этой вселенной существует множество констант, которые влияют на события в ней. Вы можете изменять их и наблюдать за жалкими попытками одноклеточных существ приспособиться к новым условиям. Такой себе симулятор Бога.</p>
+			<p>На этом сайте вы можете увидеть <a href="./web-version/index.html?lang=ru">веб версию</a> моего симулятора. Но она имеет намного меньше возможностей, чем <a href="./wpf-version.zip">ПК версия</a>.</p>
+			<p>Еще вы можете скачать две более старые версии игры: на <a href="./winforms-version.zip">winforms</a> или <a href="./console-version.zip">консольную</a>.
+		</div>
+		<h1>Связь с автором</h1>
+		<div style="font-size: 20px">
+			<p>
+			&emsp;&emsp;Vk - <a href="https://vk.com/yura_mysko">https://vk.com/yura_mysko</a>
+			<br>&emsp;&emsp;Youtube канал с демонстрациями работы программ - <a href="https://www.youtube.com/channel/UCiIj3Q0z1pNJ2KyNRcspoZw">https://www.youtube.com/channel/UCiIj3Q0z1pNJ2KyNRcspoZw</a>
+			<br>&emsp;&emsp;Блог на Habrahabr - <a href="https://habrahabr.ru/users/kogercoder/">https://habrahabr.ru/users/kogercoder/</a>
+			<br>&emsp;&emsp;Telegram - <a href="https://t.me/yura_mysko">https://t.me/yura_mysko</a>
+			<br>&emsp;&emsp;Github с кодом игры - <a href="https://github.com/KogerCoder">https://github.com/KogerCoder</a>
+			</p>
+		</div>
+	</div>
+	
+	<script>
+	var urlLang=GetUrlParameterValue("lang", window.location.href);
+	var cookieLang=HelperForGetCookie("lang");
+	var langValue= urlLang==null ? cookieLang : urlLang;
+	
+	if(langValue==="ru")
+	{
+		document.getElementById("enText").style.display="none";
+		document.getElementById("ruText").style.display="block";
+	}
+	else
+	{
+		document.getElementById("ruText").style.display="none";
+		document.getElementById("enText").style.display="block";
+	}
+	if(urlLang!=null)
+		HelperForSetCookie("lang",urlLang, "");
+	</script>
+	
+</body>
+</html>
